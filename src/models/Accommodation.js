@@ -38,7 +38,7 @@ const Accommodation = sequelize.define("Accommodation", {
   },
 });
 
-Accommodation.belongsTo(User, {
+Accommodation.belongsTo(models.User, {
   foreignKey: "userId",
   onDelete: "CASCADE",
 });

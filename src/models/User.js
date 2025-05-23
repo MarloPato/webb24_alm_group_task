@@ -1,6 +1,7 @@
 const { DataTypes } = require("sequelize");
 const sequelize = require("../config/database");
 const Accommodation = require("./Accommodation");
+
 const User = sequelize.define("User", {
   id: {
     type: DataTypes.INTEGER,
@@ -26,7 +27,7 @@ const User = sequelize.define("User", {
   },
 });
 
-User.hasMany(Accommodation, {
+User.hasMany(models.Accommodation, {
   foreignKey: "userId",
   onDelete: "CASCADE",
 });
