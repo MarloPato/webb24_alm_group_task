@@ -1,6 +1,6 @@
 const { DataTypes } = require("sequelize");
 const sequelize = require("../config/database");
-
+const Accommodation = require("./Accommodation");
 const User = sequelize.define("User", {
   id: {
     type: DataTypes.INTEGER,
@@ -26,6 +26,8 @@ const User = sequelize.define("User", {
   },
 });
 
-User.hasMany()
-
+User.hasMany(Accommodation, {
+  foreignKey: "userId",
+  onDelete: "CASCADE",
+});
 module.exports = User;
