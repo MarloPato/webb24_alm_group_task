@@ -31,12 +31,9 @@ services:
 volumes:
   pgdata:
 
-  #  Stop container (run from docker/ directory)
   #  docker-compose down
 
-  #  Start container (run from docker/ directory)
   #  docker-compose up --build
 
-  #  Alternative: Run from project root
   #  docker-compose -f docker/docker-compose.yml down
   #  docker-compose -f docker/docker-compose.yml up --build

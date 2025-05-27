@@ -1,6 +1,6 @@
 const { DataTypes } = require("sequelize");
 const sequelize = require("../config/database");
-const User = require("./User");
+const { User } = require("./User");
 
 const Accommodation = sequelize.define("Accommodation", {
   id: {
@@ -38,7 +38,7 @@ const Accommodation = sequelize.define("Accommodation", {
   },
 });
 
-Accommodation.belongsTo(User, {
+Accommodation.belongsTo(models.User, {
   foreignKey: "userId",
   onDelete: "CASCADE",
 });
